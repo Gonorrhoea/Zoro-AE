@@ -149,8 +149,6 @@ def list_all_chats(update: Update, context: CallbackContext):
 __help__ = """
 *Admins only Commands*:
   • `/Chatbot`*:* Shows chatbot control panel
-  
-*Powered By @Programmer_Network*
 """
 
 __mod_name__ = "ChatBot"
