@@ -73,7 +73,7 @@ def user_admin(permission: AdminPerms):
                 )
                 anon_callback_messages[(message.chat.id, message.message_id)] = (
                     message.reply_text(
-                        "Seems like you're anonymous, click the button below to prove your identity",
+                        "Seems like you're Anonymous, Click the Button below to Prove your Identity",
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 [
