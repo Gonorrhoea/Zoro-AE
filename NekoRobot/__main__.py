@@ -108,7 +108,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
+HELP_MSG = "Click on The Button Below To Get the Help Menu In Your DM."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 NEKO_STICKERS = (
@@ -120,14 +120,14 @@ NEKO_STICKERS = (
 )
 
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/9996ec2eafdef4692102d.jpg) 」────
-*Hola! {},*
-*Meow Meow, Don't Touch Me Without My Permission!*
+🍙[{}](https://graph.org/file/ff5a66caa80cd3e676f04.jpg)🍙
+*Kon'nichiwa! {},*
+*I am an Anime themed Group Management Bot, Built for Weebs!*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ❍ *Uptime:* `{}`
 ❍ `{}` *Users, Across* `{}` *Chats.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Guidelines Button Below To Know My Abilities ××
+➛ Click on The *Help* Button Below To Know My Abilities ××
 """
 
 buttons = [
@@ -138,9 +138,9 @@ buttons = [
         )
     ],
     [
-        InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
+        InlineKeyboardButton(text="Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Source 🌐", url="https://github.com/Awesome-Prince/NekoRobot-3.git"
+            text="Network", url="https://t.me/TeamExplorer"
         ),
     ],
     [
@@ -148,19 +148,16 @@ buttons = [
             text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
         ),
         InlineKeyboardButton(
-            text="📢 Updates", url="https://telegram.dog/Programmer_Updates"
+            text="🎉 Updates", url="https://telegram.dog/ExplorerBotUpdates"
         ),
     ],
 ]
 
 HELP_STRINGS = """
 *Main* commands available:
-➛ /help: PM's you this message.
-➛ /help <module name>: PM's you info about that module.
-➛ /donate: information on how to donate!
-➛ /settings:
-   ➛ in PM: will send you your settings for all supported modules.
-   ➛ in a group: will redirect you to pm, with all that chat's settings.
+• /start: Starts me, can be used to check if I'm alive or not.
+• /help: PM's you this message.
+• /help <module name>: PM's you info about that module.
 """
 
 GROUP_START_IMG = (
@@ -171,7 +168,7 @@ GROUP_START_IMG = (
     "https://te.legra.ph/file/c2526c05d65fd2fbfa58b.jpg",
 )
 
-DONATE_STRING = """❂ I'm Free for Everyone ❂"""
+DONATE_STRING = """《 I'm Free for Everyone 》"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -302,7 +299,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             random.choice(GROUP_START_IMG),
-            caption=f"<b>Yes, Master I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
+            caption=f"<b>Yes, I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -312,8 +309,8 @@ def start(update: Update, context: CallbackContext):
                             url=f"https://telegram.dog/{SUPPORT_CHAT}",
                         ),
                         InlineKeyboardButton(
-                            text="📢 Updates",
-                            url="https://telegram.dog/Programmer_Updates",
+                            text="🎉 Updates",
+                            url="https://telegram.dog/ExplorerBotUpdates",
                         ),
                     ]
                 ]
@@ -655,7 +652,7 @@ def donate(update: Update, context: CallbackContext) -> None:
 
         if OWNER_ID != 5629305049 and DONATION_LINK:
             update.effective_message.reply_text(
-                f"You can also donate to the person currently running me [here]({DONATION_LINK})",
+                f"You can also donate to the person who is currently running me [here]({DONATION_LINK})",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -677,7 +674,7 @@ def donate(update: Update, context: CallbackContext) -> None:
                         [
                             InlineKeyboardButton(
                                 text="📢 Updates",
-                                url="https://telegram.dog/Programmer_Updates",
+                                url="https://telegram.dog/ExplorerBotUpdates",
                             ),
                             InlineKeyboardButton(
                                 text="🚑 Support",
